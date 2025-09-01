@@ -22,9 +22,9 @@ export const NavComponent = () => {
     //Removes when component removed from the DOM
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  const onUpdateActiveLink = (value) => {
-    setActiveLink(value);
-  }
+  // const onUpdateActiveLink = (value) => {
+  //   setActiveLink(value);
+  // }
 
   return (
     <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
@@ -38,7 +38,7 @@ export const NavComponent = () => {
           <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => setActiveLink('skills')}>Skills</Nav.Link>
           <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => setActiveLink('projects')}>Projects</Nav.Link>
         </Nav>
-        <span className="navbar-text">
+        <div className="navbar-text">
           <div className="social-icon">
             <a href="https://www.linkedin.com/in/andrei-iakimov-50167a94/" target="_blank"><img src={linkedin} alt="LinkedIn" /></a>
             <a href="https://github.com/andrei-iakimov"  target="_blank"><img src={github} alt="Github" /></a>
@@ -46,7 +46,7 @@ export const NavComponent = () => {
           <button className="vvd" onClick={() => {
             document.getElementById('connect').scrollIntoView({ behavior: 'smooth' });
           }}><span>Let’s Connect</span></button>
-        </span>
+        </div>
       </Navbar.Collapse>
     </Container>
   </Navbar>
