@@ -1,8 +1,6 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import monstersRolodex from "../assets/img/monsters-rolodex.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import wip from "../assets/img/work-in-progress.png";
@@ -11,34 +9,10 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      title: "Mosters Rolodex",
+      description: "Simple React App to display a list of monsters",
+      imgUrl: monstersRolodex,
+      redirectUrl: "https://andrei-iakimov.github.io/monsters-rolodex/"
     },
   ];
 
@@ -68,7 +42,14 @@ export const Projects = () => {
                 </Nav>
                 <Tab.Content id="slideInUp">
                   <Tab.Pane eventKey="first">
-                    {/* <Row>
+                    <div className="wip-container">
+                      <img src={wip} alt="Work in Progress" />
+                      <h3>Work in Progress</h3>
+                      <p>Stay tuned for more updates!</p>
+                    </div>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="second">
+                      <Row>
                       {
                         projects.map((project, index) => {
                           return (
@@ -79,19 +60,7 @@ export const Projects = () => {
                           )
                         })
                       }
-                    </Row> */}
-                    <div className="wip-container">
-                      <img src={wip} alt="Work in Progress" />
-                      <h3>Work in Progress</h3>
-                      <p>Stay tuned for more updates!</p>
-                    </div>
-                  </Tab.Pane>
-                  <Tab.Pane eventKey="second">
-                      <div className="wip-container">
-                        <img src={wip} alt="Work in Progress" />
-                        <h3>Work in Progress</h3>
-                        <p>Stay tuned for more updates!</p>
-                    </div>
+                    </Row>
                   </Tab.Pane>
                   <Tab.Pane eventKey="third">
                       <div className="wip-container">
